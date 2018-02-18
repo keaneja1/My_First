@@ -1,0 +1,12 @@
+num = int(input("Enter a number: "))
+
+den = range(1,num + 1)
+
+divisor = []
+
+for i in den:
+  if num % i == 0:
+   
+    divisor.append(i)
+    
+print(divisor)
