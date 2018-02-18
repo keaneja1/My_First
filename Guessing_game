@@ -1,0 +1,19 @@
+#guessing game:  input an integer and see if you can guess right
+import random
+print("I am thinking of a number between 1 and 9\nGuess a number")
+num = int(input("Enter your guess:  "))
+check = random.randint(1,9)
+count = 1
+while True:
+  if num < check:
+    print("Your guess is too low\nTry again")
+    count +=1
+    num = int(input("Enter your guess:  "))
+  if num > check:
+    print("Your guess is too high\nTry again")
+    num = int(input("Enter your guess:  "))
+    count +=1
+  if num == check:
+    print("Yes, you got it.")
+    print("You got the number in",count, "guesses")
+    quit()
